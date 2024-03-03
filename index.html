@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title> Even Odd Finder by Kamal Sir </title>
+	<style>
+		* { font-size: 60px; }
+		body { background-color: lightblue; }
+	</style>
+	<script>
+		function check()
+		{
+			event.preventDefault();
+			let num = document.getElementById("id_num");
+			let msg = document.getElementById("id_msg");
+
+			if (num.value == "")
+			{
+			alert("u did not enter integer");
+			msg.innerHTML = "";
+			num.focus();
+			return;			
+			}
+			let n = parseInt(num.value);
+			let ans = "";
+			if (n % 2 == 0)
+				ans = "Even";
+			else
+				ans = "Odd";
+			msg.innerHTML = ans;
+		}
+	</script>
+</head>
+<body>
+<center>
+	<h1> Even Odd Finder </h1>
+	<form onsubmit="check()">
+	<input type="number" placeholder="enter integer" id="id_num"/>
+	<br><br>
+	<input type="submit"/>
+	</form>	
+	<h2 id="id_msg" />
+</center>
+</body>
+</html>
+
+
+
+
+
+
